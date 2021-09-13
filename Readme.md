@@ -4,7 +4,7 @@
 [ДЕМО](https://ewudes.github.io/ha-catEnergy/build/)
 
 
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/68098-cat-energy-19.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/68098-cat-energy-19
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/68098-cat-energy-19/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/68098-cat-energy-19?type=dev
+[travis-image]: https://travis-ci.com/ewudes/ha-catEnergy.svg?branch=master
+[travis-url]: https://travis-ci.com/ewudes/ha-catEnergy
+[dependency-image]: https://david-dm.org/ewudes/ha-catEnergy/dev-status.svg?style=flat-square
+[dependency-url]: https://david-dm.org/ewudes/ha-catEnergy?type=dev
