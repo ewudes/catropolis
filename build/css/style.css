@@ -28,8 +28,7 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
@@ -1120,11 +1119,16 @@ body {
   line-height: 12px;
   text-transform: lowercase;
   color: #444444;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
   background-color: #f2f2f2;
   padding: 0 20px;
-  text-align: center; }
+  text-align: center;
+  width: 135px;
+  line-height: 1.2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-break: break-word; }
 
 .example__costs {
   text-align: center;
@@ -1166,6 +1170,9 @@ body {
     font-size: 14px;
     background-color: #ffffff;
     padding: 0 15px;
+    width: 100px;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     font-family: "Arial", sans-serif; }
     .example__weight-label br,
     .example__period-label br {
@@ -1206,9 +1213,10 @@ body {
   .example__weight-label,
   .example__period-label {
     background-color: #f2f2f2;
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-    padding: 0 10px; }
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    padding: 0 10px;
+    width: 90px; }
   .example__costs {
     width: 100%;
     text-align: left;

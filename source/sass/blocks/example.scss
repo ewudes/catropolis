@@ -54,10 +54,14 @@
   line-height: 12px;
   text-transform: lowercase;
   color: $darkgrey;
-  transform: translateY(10px);
+  transform: translateY(5px);
   background-color: $grey;
   padding: 0 20px;
   text-align: center;
+  width: 135px;
+  line-height: 1.2;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
 .example__costs {
@@ -114,6 +118,8 @@
     font-size: 14px;
     background-color: $white;
     padding: 0 15px;
+    width: 100px;
+    transform: translateY(15px);
 
     @include arial();
 
@@ -168,8 +174,9 @@
   .example__weight-label,
   .example__period-label {
     background-color: $grey;
-    transform: translateY(5px);
+    transform: translateY(15px);
     padding: 0 10px;
+    width: 90px;
   }
 
   .example__costs {
