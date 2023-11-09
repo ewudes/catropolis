@@ -17,6 +17,8 @@ var include = require("posthtml-include");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var server = require("browser-sync").create();
+const { readFileSync } = require('fs')
+const html = readFileSync('index.html')
 
 gulp.task("clean", function () {
   return del("build/**");
@@ -68,9 +70,9 @@ gulp.task("sprite", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
+  .pipe(posthtml([ include({ encoding: 'utf8' }) ]))
+    .process(html)
+    .then((result) => console.log(result.html))
   .pipe(htmlmin({
     minifyJS: true,
     minifyURLs: true,
