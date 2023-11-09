@@ -1,0 +1,165 @@
+.catalog__list {
+  display: flex;
+  flex-direction: column;
+
+  @include reset-list-styles();
+  margin: 0;
+}
+
+.catalog__item {
+  border-bottom: 1px solid $grey;
+
+  @include horizontal-padding($mobile-padding);
+
+  &:first-child {
+    border-top: 1px solid $grey;
+  }
+
+  &--more {
+    padding-bottom: 25px;
+    padding-top: 80px;
+    border-bottom: 1px solid $grey;
+  }
+}
+
+.catalog__tagline {
+  @include arial();
+  font-size: 12px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: $darkgrey;
+}
+
+.catalog__subtitle {
+  position: relative;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+
+  &::after,
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: 57px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: $grey;
+  }
+
+  &::before {
+    transform: rotate(90deg) translateY(15px);
+  }
+}
+
+.catalog__btn-more {
+  background-color: $grey;
+  color: $darkgrey;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: $grey-hvr;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 60px;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
+  .catalog__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .catalog__item {
+    padding: 0;
+    padding-top: 120px;
+    border: none;
+    width: 324px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  .catalog__subtitle {
+    padding: 0 80px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+
+    &::after,
+    &::before {
+      bottom: 120px;
+      width: 60px;
+    }
+
+    &::before {
+      transform: rotate(90deg) translateY(30px);
+    }
+  }
+
+  .catalog__tagline {
+    padding: 0 50px;
+    padding-top: 25px;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .catalog__btn-more {
+    margin-top: 80px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: $desktop-width;
+
+    @include horizontal-padding($desktop-padding);
+    padding-top: 80px;
+  }
+
+  .catalog__list {
+    justify-content: space-between;
+    margin-top: 45px;
+  }
+
+  .catalog__item {
+    width: 245px;
+  }
+
+  .catalog__subtitle {
+    padding: 0 40px;
+  }
+
+  .catalog__tagline {
+    padding: 0 10px;
+    padding-top: 20px;
+  }
+
+  .catalog__btn-more {
+    margin-top: 85px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}

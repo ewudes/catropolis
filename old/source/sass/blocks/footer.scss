@@ -1,0 +1,32 @@
+.footer {
+  background-color: $grey;
+
+  @include horizontal-padding($mobile-padding);
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding: 0;
+  }
+
+  .footer__wrap {
+    display: flex;
+    justify-content: space-between;
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 150px;
+
+    @include horizontal-padding($tablet-padding);
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .footer__wrap {
+    width: $desktop-width;
+    min-height: 150px;
+
+    @include horizontal-padding($desktop-padding);
+  }
+}

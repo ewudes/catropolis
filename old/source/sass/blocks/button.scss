@@ -1,0 +1,17 @@
+.button {
+  display: block;
+  color: $white;
+  background-color: $green;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 13px 0;
+
+  &:hover {
+    background-color: $green-hvr;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

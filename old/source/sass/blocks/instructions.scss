@@ -1,0 +1,136 @@
+.instructions {
+  @include horizontal-padding($mobile-padding);
+}
+
+.instructions__list {
+  @include reset-list-styles();
+
+  margin: 0;
+  margin-bottom: 45px;
+}
+
+.instructions__item {
+  position: relative;
+
+  @include arial();
+  color: $darkgrey;
+  padding-left: 80px;
+  margin: 27px 0;
+
+  p {
+    margin: 0;
+    min-height: 50px;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    transform: translateY(-50%);
+    background-color: $green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../img/advantage-leaf@1x.png");
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../img/advantage-powder@1x.png");
+    }
+  }
+
+  &--dining {
+    &::before {
+      background-image: url("../img/advantage-dining@1x.png");
+    }
+  }
+
+  &--clock {
+    &::before {
+      background-image: url("../img/advantage-clock@1x.png");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .instructions {
+    width: $tablet-width;
+    margin: 0 auto;
+    padding-top: 18px;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
+  .instructions__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .instructions__item {
+    position: relative;
+    width: 325px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 45px 0;
+    min-height: 230px;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-top: 120px;
+    padding-right: 90px;
+
+    &::before {
+      top: 45px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      counter-increment: num;
+      content: counter(num);
+      position: absolute;
+      top: 90px;
+      right: 75px;
+      font-size: 280px;
+      color: $grey;
+      z-index: -1;
+
+      @include oswald($regular);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .instructions {
+    width: $desktop-width;
+    padding-top: 40px;
+
+    @include horizontal-padding($desktop-padding);
+  }
+
+  .instructions__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .instructions__item {
+    width: 245px;
+    padding-right: 0;
+    margin-bottom: 20px;
+
+    &::after {
+      right: 0;
+    }
+  }
+}

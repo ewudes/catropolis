@@ -1,0 +1,201 @@
+.subtitle {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  &--optional,
+  &--contacts,
+  &--comment,
+  &--extra {
+    position: relative;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100vw;
+      height: 4px;
+      background-color: $green;
+      z-index: -1;
+    }
+  }
+
+  &--contacts {
+    padding-top: 27px;
+    margin-bottom: 15px;
+
+    &::after {
+      top: 40px;
+      left: 200px;
+    }
+  }
+
+  &--comment {
+    padding-top: 10px;
+
+    &::after {
+      top: 22px;
+      left: 140px;
+    }
+  }
+
+  &--optional {
+    @include horizontal-padding($mobile-padding);
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &::after {
+      left: 260px;
+    }
+  }
+
+  &--extra {
+    padding-top: 25px;
+    margin-bottom: 22px;
+
+    &::after {
+      top: 40px;
+      left: 160px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .subtitle {
+    width: 100%;
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 20px;
+      right: 660px;
+      width: 100vw;
+      height: 4px;
+      background-color: $green;
+      z-index: -1;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100vw;
+      height: 4px;
+      background-color: $green;
+      z-index: -1;
+    }
+
+    &--contacts {
+      padding-top: 75px;
+
+      &::before {
+        top: 95px;
+      }
+
+      &::after {
+        top: 95px;
+        left: 550px;
+      }
+
+      br {
+        display: none;
+      }
+    }
+
+    &--comment {
+      &::before {
+        top: 30px;
+      }
+
+      &::after {
+        top: 30px;
+        left: 210px;
+      }
+    }
+
+    &--optional {
+      padding-left: 40px;
+      margin-top: 35px;
+
+      &::before {
+        right: 770px;
+      }
+
+      &::after {
+        left: 410px;
+      }
+    }
+
+    &--extra {
+      padding-top: 65px;
+
+      &::before {
+        top: 85px;
+        right: 670px;
+      }
+
+      &::after {
+        top: 85px;
+        left: 250px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subtitle {
+    &::before {
+      right: 1260px;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 80px;
+      padding-top: 50px;
+
+      &::before,
+      &::after {
+        top: 70px;
+      }
+    }
+
+    &--optional {
+      margin-top: 50px;
+      margin-bottom: 80px;
+      padding-left: 0;
+
+      &::after {
+        left: 370px;
+      }
+    }
+
+    &--comment {
+      padding-top: 50px;
+
+      &::before,
+      &::after {
+        top: 70px;
+      }
+    }
+
+    &--extra {
+      padding-top: 60px;
+      margin-bottom: 55px;
+
+      &::before {
+        top: 80px;
+      }
+
+      &::after {
+        top: 80px;
+        left: 250px;
+      }
+    }
+  }
+}
