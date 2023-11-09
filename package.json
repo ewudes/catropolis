@@ -9,7 +9,7 @@
     "gulp": "^3.9.1",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^9.0.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "9.0.x",
     "gulp-posthtml": "^3.0.5",
