@@ -1,5 +1,5 @@
 {
-  "name": "cat-energy",
+  "name": "catropolis",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,6 +8,14 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewudes/catropolis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ewudes/catropolis/issues"
+  },
+  "homepage": "https://github.com/ewudes/catropolis#readme",
   "dependencies": {
     "@angular/animations": "^17.0.0",
     "@angular/common": "^17.0.0",
