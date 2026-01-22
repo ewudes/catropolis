@@ -6,7 +6,7 @@
     "autoprefixer": "10.4.x",
     "browser-sync": "^3.0.3",
     "del": "^5.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.1",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^9.0.0",
