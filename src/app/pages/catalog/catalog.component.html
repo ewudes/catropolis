@@ -1,0 +1,29 @@
+<section class="catalog">
+  <h2 class="title title--catalog">Каталог продукции</h2>
+  <ul class="catalog__list">
+    @for (product of products; track product.id) {
+      <li class="catalog__item">
+        <app-product-card [product]="product"></app-product-card>
+      </li>
+    }
+    <li class="catalog__item catalog__item--more">
+      <article class="product-card product-card--more">
+        <h3 class="catalog__subtitle">Показать еще 100500 товаров</h3>
+        <p class="catalog__tagline">На самом деле вкусов гораздо больше!</p>
+        <button type="button" class="button catalog__btn-more" (click)="onShowMore($event)">Показать все</button>
+      </article>
+    </li>
+  </ul>
+</section>
+<section class="optional">
+  <h3 class="subtitle subtitle--optional">Дополнительные товары</h3>
+  <ul class="optional__list">
+    @for (product of optionalProducts; track product.id) {
+      <li class="optional__item">
+        <app-optional-card [product]="product"></app-optional-card>
+      </li>
+    }
+  </ul>
+  <app-gift></app-gift>
+</section>
+<app-location></app-location>
