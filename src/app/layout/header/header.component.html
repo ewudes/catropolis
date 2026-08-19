@@ -1,0 +1,48 @@
+<header class="header" [class.header--index]="isHomeRoute()">
+  <div class="header__wrap">
+    <a class="logo" routerLink="/">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="assets/img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="assets/img/logo-tablet.svg">
+        <img class="logo__pic" src="assets/img/logo-mobile.svg" alt="Логотип магазина">
+      </picture>
+      <span class="logo__title logo__title--header"><strong>Cat </strong>energy</span>
+    </a>
+    <button
+      type="button"
+      class="header__toggle-menu"
+      [class.header__toggle-menu--closed]="!menuOpen()"
+      [class.header__toggle-menu--opened]="menuOpen()"
+      (click)="toggleMenu()"
+    >Меню</button>
+  </div>
+  <nav class="nav" [class.nav--show]="menuOpen()">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a
+          routerLink="/"
+          routerLinkActive="nav__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav__link"
+          [class.nav__link--index]="isHomeRoute()"
+        >Главная</a>
+      </li>
+      <li class="nav__item">
+        <a
+          routerLink="/catalog"
+          routerLinkActive="nav__link--active"
+          class="nav__link"
+          [class.nav__link--index]="isHomeRoute()"
+        >Каталог продукции</a>
+      </li>
+      <li class="nav__item">
+        <a
+          routerLink="/form"
+          routerLinkActive="nav__link--active"
+          class="nav__link"
+          [class.nav__link--index]="isHomeRoute()"
+        >Подбор программы</a>
+      </li>
+    </ul>
+  </nav>
+</header>
