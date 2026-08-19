@@ -1,0 +1,46 @@
+<div
+  class="slider"
+  [class.slider--before]="activeView() === 'before'"
+  [class.slider--after]="activeView() === 'after'"
+>
+  <div class="slider__img-wrap">
+    <div class="slider__item slider__item--before">
+      <picture>
+        <source type="image/webp" media="(min-width: 1300px)" srcset="assets/img/before-desktop@1x.webp 1x, assets/img/before-desktop@2x.webp 2x">
+        <source media="(min-width: 1300px)" srcset="assets/img/before-desktop@1x.png 1x, assets/img/before-desktop@2x.png 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/before-tablet@1x.webp 1x, assets/img/before-tablet@2x.webp 2x">
+        <source media="(min-width: 768px)" srcset="assets/img/before-tablet@1x.png 1x, assets/img/before-tablet@2x.png 2x">
+        <source type="image/webp" srcset="assets/img/before-mobile@1x.webp 1x, assets/img/before-mobile@2x.webp 2x">
+        <img class="slider__img slider__img--before" src="assets/img/before-mobile@1x.png" srcset="assets/img/before-mobile@2x.png 2x" alt="Изображение кота до">
+      </picture>
+    </div>
+    <div class="slider__item slider__item--after">
+      <picture>
+        <source type="image/webp" media="(min-width: 1300px)" srcset="assets/img/after-desktop@1x.webp 1x, assets/img/after-desktop@2x.webp 2x">
+        <source media="(min-width: 1300px)" srcset="assets/img/after-desktop@1x.png 1x, assets/img/after-desktop@2x.png 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/after-tablet@1x.webp 1x, assets/img/after-tablet@2x.webp 2x">
+        <source media="(min-width: 768px)" srcset="assets/img/after-tablet@1x.png 1x, assets/img/after-tablet@2x.png 2x">
+        <source type="image/webp" srcset="assets/img/after-mobile@1x.webp 1x, assets/img/after-mobile@2x.webp 2x">
+        <img class="slider__img slider__img--after" src="assets/img/after-mobile@1x.png" srcset="assets/img/after-mobile@2x.png 2x" alt="Изображение кота после">
+      </picture>
+    </div>
+  </div>
+  <div class="slider__controls">
+    <button
+      type="button"
+      class="slider__button slider__button--before"
+      [class.slider__button--active]="activeView() === 'before'"
+      (click)="showBefore()"
+    >Было</button>
+    <div class="slider__range">
+      <div class="slider__scale"></div>
+      <div class="slider__thumb"></div>
+    </div>
+    <button
+      type="button"
+      class="slider__button slider__button--after"
+      [class.slider__button--active]="activeView() === 'after'"
+      (click)="showAfter()"
+    >Стало</button>
+  </div>
+</div>

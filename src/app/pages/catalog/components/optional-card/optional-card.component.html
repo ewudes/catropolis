@@ -1,0 +1,12 @@
+<article class="optional-card">
+  <h4 class="optional-card__title">{{ product.title }}</h4>
+  <table class="optional-card__meta">
+    <tbody>
+      <tr>
+        <td>{{ product.unit }}</td>
+        <td>{{ product.price }} Р.</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="button optional-card__btn-order" (click)="onOrder($event)">Заказать</button>
+</article>
