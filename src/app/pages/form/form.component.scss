@@ -109,6 +109,12 @@
   }
 }
 
+.selection-form__radio:focus-visible + .selection-form__label::before,
+.selection-form__checkbox:focus-visible + .selection-form__label::before {
+  outline: 2px solid $darkgrey;
+  outline-offset: 2px;
+}
+
 .selection-form__input,
 .selection-form__comment {
   flex-grow: 1;
@@ -144,6 +150,14 @@
 
 .selection-form__input.ng-touched.ng-invalid {
   border-color: $error;
+}
+
+.selection-form__error {
+  @include arial();
+  width: 100%;
+  margin: 4px 0 0;
+  color: $error-text;
+  font-size: 12px;
 }
 
 .selection-form__input[type="email"],

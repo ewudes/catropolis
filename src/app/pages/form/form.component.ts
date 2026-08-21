@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LocationComponent } from '../../layout/location/location.component';
 
@@ -10,7 +10,7 @@ import { LocationComponent } from '../../layout/location/location.component';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
-  private readonly fb = new FormBuilder();
+  private readonly fb = inject(FormBuilder);
 
   protected readonly form = this.fb.nonNullable.group({
     name: ['', Validators.required],
