@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +13,14 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 export class HeaderComponent {
   protected readonly menuOpen = signal(false);
 
-  constructor(private readonly router: Router) {}
+  constructor(private readonly router: Router) {
+    this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        takeUntilDestroyed()
+      )
+      .subscribe(() => this.menuOpen.set(false));
+  }
 
   protected isHomeRoute(): boolean {
     return this.router.url === '/';
