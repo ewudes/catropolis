@@ -33,8 +33,8 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid $border-grey;
+  border-bottom: 1px solid $border-grey;
 
   @include reset-list-styles();
 }
