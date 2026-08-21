@@ -109,10 +109,7 @@
       content: " ";
       position: absolute;
       width: 100vw;
-      top: 41px;
-      left: -100vw;
-      right: 0;
-      bottom: 0;
+      inset: 41px 0 0 -100vw;
       background-color: $grey;
       transform: translate(5px, 129px);
     }
@@ -145,10 +142,7 @@
       content: " ";
       position: absolute;
       width: 100vw;
-      top: 170px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 170px 0 0;
       background-color: $light-ashen;
     }
   }
@@ -258,10 +252,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 190px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 190px 0 0;
       background-color: $grey;
     }
   }
