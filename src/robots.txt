@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://catropolis.netlify.app/sitemap.xml
