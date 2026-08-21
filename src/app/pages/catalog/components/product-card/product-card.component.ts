@@ -13,6 +13,7 @@ export class ProductCardComponent {
   @Input({ required: true }) product!: Product;
 
   onOrder(event: Event): void {
+    // TODO: подключить оформление заказа после появления бэкенда магазина.
     event.preventDefault();
   }
 }
