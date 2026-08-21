@@ -17,6 +17,7 @@ export class CatalogComponent {
   protected readonly optionalProducts = OPTIONAL_PRODUCTS;
 
   onShowMore(event: Event): void {
+    // TODO: подключить пагинацию/подгрузку каталога после появления бэкенда магазина.
     event.preventDefault();
   }
 }

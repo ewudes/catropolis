@@ -89,8 +89,7 @@
   }
 
   .catalog__list {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin-top: 40px;
   }
